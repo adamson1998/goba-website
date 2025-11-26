@@ -1,0 +1,442 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book a Visit - Goba Peaks | Schedule Your Tour</title>
+    <meta name="description" content="Schedule a private tour of Goba Peaks. Book your visit and experience elevated living firsthand.">
+    
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Styles -->
+    <link rel="stylesheet" href="css/style.css">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <div class="nav-logo">
+                <img src="images/goba-peaks-logo-secondary.png" alt="Goba Peaks Logo" class="logo">
+            </div>
+            <ul class="nav-menu">
+                <li class="nav-item">
+                    <a href="index.html" class="nav-link">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a href="about.html" class="nav-link">About</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#apartments" class="nav-link">Apartments</a>
+                </li>
+                <li class="nav-item">
+                    <a href="location.html" class="nav-link">Location</a>
+                </li>
+                <li class="nav-item">
+                    <a href="index.html#gallery" class="nav-link">Gallery</a>
+                </li>
+                <li class="nav-item">
+                    <a href="booking.html" class="nav-link cta-button active">Book Now</a>
+                </li>
+            </ul>
+            <div class="nav-toggle" id="mobile-menu">
+                <span class="bar"></span>
+                <span class="bar"></span>
+                <span class="bar"></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Page Header -->
+    <section class="page-header">
+        <div class="page-header-background">
+            <img src="images/gallery/modern-living-1.jpg" alt="Book Your Visit" class="page-header-image">
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="page-header-content">
+            <h1 class="page-title">Book Your Visit</h1>
+            <p class="page-subtitle">Experience Goba Peaks Firsthand</p>
+        </div>
+    </section>
+
+    <!-- Booking Content -->
+    <section class="booking-section">
+        <div class="container">
+            <!-- Booking Introduction -->
+            <div class="booking-intro">
+                <h2 class="section-title center">Schedule Your Private Tour</h2>
+                <p class="section-description center">
+                    Take the first step towards your dream home. Schedule a personalized tour of Goba Peaks 
+                    and experience elevated living firsthand. Our expert team will guide you through our 
+                    stunning apartments and world-class amenities.
+                </p>
+            </div>
+
+            <!-- Booking Form Section -->
+            <div class="booking-container">
+                <!-- Form -->
+                <div class="booking-form-section">
+                    <form class="booking-form" id="bookingForm">
+                        <h3 class="form-section-title">Personal Information</h3>
+                        
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="firstName" class="form-label">First Name *</label>
+                                <input type="text" id="firstName" name="firstName" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="lastName" class="form-label">Last Name *</label>
+                                <input type="text" id="lastName" name="lastName" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="email" class="form-label">Email Address *</label>
+                                <input type="email" id="email" name="email" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="phone" class="form-label">Phone Number *</label>
+                                <input type="tel" id="phone" name="phone" class="form-input" required>
+                            </div>
+                        </div>
+
+                        <h3 class="form-section-title">Visit Details</h3>
+
+                        <div class="form-row">
+                            <div class="form-group">
+                                <label for="visitDate" class="form-label">Preferred Date *</label>
+                                <input type="date" id="visitDate" name="visitDate" class="form-input" required>
+                            </div>
+                            <div class="form-group">
+                                <label for="visitTime" class="form-label">Preferred Time *</label>
+                                <select id="visitTime" name="visitTime" class="form-input" required>
+                                    <option value="">Select time</option>
+                                    <option value="9:00 AM">9:00 AM</option>
+                                    <option value="10:00 AM">10:00 AM</option>
+                                    <option value="11:00 AM">11:00 AM</option>
+                                    <option value="12:00 PM">12:00 PM</option>
+                                    <option value="1:00 PM">1:00 PM</option>
+                                    <option value="2:00 PM">2:00 PM</option>
+                                    <option value="3:00 PM">3:00 PM</option>
+                                    <option value="4:00 PM">4:00 PM</option>
+                                    <option value="5:00 PM">5:00 PM</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="apartmentType" class="form-label">Apartment Type of Interest</label>
+                            <select id="apartmentType" name="apartmentType" class="form-input">
+                                <option value="">Select apartment type</option>
+                                <option value="urban-studio">Urban Studio</option>
+                                <option value="family-apartment">Family Apartment</option>
+                                <option value="luxury-penthouse">Luxury Penthouse</option>
+                                <option value="all">All Types</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="numberOfGuests" class="form-label">Number of Guests</label>
+                            <select id="numberOfGuests" name="numberOfGuests" class="form-input">
+                                <option value="1">1 person</option>
+                                <option value="2">2 people</option>
+                                <option value="3">3 people</option>
+                                <option value="4">4 people</option>
+                                <option value="5+">5+ people</option>
+                            </select>
+                        </div>
+
+                        <div class="form-group">
+                            <label for="message" class="form-label">Additional Information or Questions</label>
+                            <textarea id="message" name="message" class="form-input" rows="5" 
+                                placeholder="Let us know if you have any specific requirements or questions..."></textarea>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="newsletter" class="form-checkbox">
+                                <span>I would like to receive updates and exclusive offers from Goba Peaks</span>
+                            </label>
+                        </div>
+
+                        <div class="form-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" name="terms" class="form-checkbox" required>
+                                <span>I agree to the <a href="#" class="link">Terms & Conditions</a> and <a href="#" class="link">Privacy Policy</a> *</span>
+                            </label>
+                        </div>
+
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Schedule My Visit
+                        </button>
+
+                        <p class="form-note">
+                            * Required fields. We'll confirm your booking within 24 hours.
+                        </p>
+                    </form>
+                </div>
+
+                <!-- Booking Sidebar -->
+                <div class="booking-sidebar">
+                    <!-- What to Expect -->
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">What to Expect</h3>
+                        <ul class="expect-list">
+                            <li>
+                                <div class="expect-icon">✓</div>
+                                <div class="expect-text">
+                                    <strong>Personal Tour Guide</strong>
+                                    <p>Expert staff member dedicated to your visit</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-icon">✓</div>
+                                <div class="expect-text">
+                                    <strong>Apartment Viewings</strong>
+                                    <p>See multiple apartment types and layouts</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-icon">✓</div>
+                                <div class="expect-text">
+                                    <strong>Amenities Tour</strong>
+                                    <p>Experience our world-class facilities</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-icon">✓</div>
+                                <div class="expect-text">
+                                    <strong>Q&A Session</strong>
+                                    <p>Get all your questions answered</p>
+                                </div>
+                            </li>
+                            <li>
+                                <div class="expect-icon">✓</div>
+                                <div class="expect-text">
+                                    <strong>Pricing & Availability</strong>
+                                    <p>Discuss options that fit your needs</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <!-- Contact Info -->
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">Prefer to Call?</h3>
+                        <div class="contact-info">
+                            <div class="contact-item">
+                                <div class="contact-icon phone-icon"></div>
+                                <div class="contact-details">
+                                    <strong>Phone</strong>
+                                    <p>+255 XXX XXX XXX</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon email-icon"></div>
+                                <div class="contact-details">
+                                    <strong>Email</strong>
+                                    <p>info@gobapeaks.co.tz</p>
+                                </div>
+                            </div>
+                            <div class="contact-item">
+                                <div class="contact-icon time-icon"></div>
+                                <div class="contact-details">
+                                    <strong>Office Hours</strong>
+                                    <p>Mon - Sat: 9AM - 6PM<br>Sunday: By Appointment</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Virtual Tour Option -->
+                    <div class="sidebar-card">
+                        <h3 class="sidebar-title">Can't Visit in Person?</h3>
+                        <p class="sidebar-description">
+                            Schedule a virtual tour from the comfort of your home. Our team will give you 
+                            a live video walkthrough of our apartments and amenities.
+                        </p>
+                        <a href="#" class="btn btn-secondary btn-full">Request Virtual Tour</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- FAQs -->
+            <div class="faq-section">
+                <h2 class="section-title center">Frequently Asked Questions</h2>
+                
+                <div class="faq-grid">
+                    <div class="faq-item">
+                        <h3 class="faq-question">How long does a typical tour take?</h3>
+                        <p class="faq-answer">
+                            Most tours last between 45-60 minutes, depending on your interests and questions. 
+                            We're happy to accommodate your schedule and pace.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can I reschedule my visit?</h3>
+                        <p class="faq-answer">
+                            Absolutely! Just contact us at least 24 hours before your scheduled visit, 
+                            and we'll be happy to arrange a new time that works for you.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Are pets allowed during the tour?</h3>
+                        <p class="faq-answer">
+                            While Goba Peaks is pet-friendly for residents, we ask that you leave pets 
+                            at home during your initial tour for safety and convenience.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">What should I bring?</h3>
+                        <p class="faq-answer">
+                            Just yourself and any questions you have! We'll provide all the information 
+                            and materials you need during your visit.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Is parking available?</h3>
+                        <p class="faq-answer">
+                            Yes, we have dedicated visitor parking. Your tour guide will provide 
+                            parking instructions when confirming your appointment.
+                        </p>
+                    </div>
+                    <div class="faq-item">
+                        <h3 class="faq-question">Can I see multiple apartment types?</h3>
+                        <p class="faq-answer">
+                            Of course! We encourage you to view different apartment types to find 
+                            the perfect fit for your lifestyle and needs.
+                        </p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Testimonials -->
+            <div class="testimonials-section">
+                <h2 class="section-title center">What Our Visitors Say</h2>
+                <div class="testimonials-grid">
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "The tour was exceptional! The staff was knowledgeable and patient with all 
+                            our questions. The apartments exceeded our expectations."
+                        </p>
+                        <p class="testimonial-author">- Sarah M.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Scheduling was easy, and the tour was comprehensive. We got to see everything 
+                            we wanted and more. Highly recommend visiting in person!"
+                        </p>
+                        <p class="testimonial-author">- James K.</p>
+                    </div>
+                    <div class="testimonial-card">
+                        <div class="testimonial-rating">★★★★★</div>
+                        <p class="testimonial-text">
+                            "Professional, welcoming, and informative. The virtual tour option was perfect 
+                            for our busy schedule. Now we're proud residents!"
+                        </p>
+                        <p class="testimonial-author">- Amina R.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <img src="images/goba-peaks-logo-secondary.png" alt="Goba Peaks" class="footer-logo">
+                    <p class="footer-description">
+                        Elevated living in the heart of Dar es Salaam. Experience luxury, comfort, and sophistication at Goba Peaks.
+                    </p>
+                    <div class="social-links">
+                        <a href="#" class="social-link" aria-label="Facebook">
+                            <div class="social-icon facebook-icon"></div>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Instagram">
+                            <div class="social-icon instagram-icon"></div>
+                        </a>
+                        <a href="#" class="social-link" aria-label="Twitter">
+                            <div class="social-icon twitter-icon"></div>
+                        </a>
+                        <a href="#" class="social-link" aria-label="LinkedIn">
+                            <div class="social-icon linkedin-icon"></div>
+                        </a>
+                    </div>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="index.html#apartments">Apartments</a></li>
+                        <li><a href="location.html">Location</a></li>
+                        <li><a href="index.html#gallery">Gallery</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Contact Info</h3>
+                    <ul class="footer-links">
+                        <li>📍 Dar es Salaam, Tanzania</li>
+                        <li>📞 +255 XXX XXX XXX</li>
+                        <li>✉️ info@gobapeaks.co.tz</li>
+                        <li>🕐 Mon - Sat: 9AM - 6PM</li>
+                    </ul>
+                </div>
+
+                <div class="footer-section">
+                    <h3 class="footer-title">Newsletter</h3>
+                    <p class="footer-newsletter-text">Subscribe for updates and exclusive offers</p>
+                    <form class="newsletter-form">
+                        <input type="email" placeholder="Your email" class="newsletter-input" required>
+                        <button type="submit" class="btn btn-primary">Subscribe</button>
+                    </form>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Goba Peaks by Whistling Woods. All rights reserved.</p>
+                <div class="footer-legal">
+                    <a href="#">Privacy Policy</a>
+                    <span>|</span>
+                    <a href="#">Terms of Service</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="js/script.js"></script>
+    <script>
+        // Booking form handler
+        document.getElementById('bookingForm').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Get form data
+            const formData = new FormData(this);
+            const data = Object.fromEntries(formData);
+            
+            // Show success message (in production, send to backend)
+            alert('Thank you for your booking request! We will confirm your appointment within 24 hours via email or phone.');
+            
+            // Reset form
+            this.reset();
+        });
+
+        // Set minimum date to today
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById('visitDate').setAttribute('min', today);
+    </script>
+</body>
+</html>
